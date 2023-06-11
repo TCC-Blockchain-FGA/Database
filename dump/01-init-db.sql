@@ -23,7 +23,20 @@ CREATE TABLE users (
     contactGender VARCHAR NOT NULL,
     languages VARCHAR NOT NULL,
     preferredLanguage VARCHAR,
-    generalPractitioner VARCHAR
+    generalPractitioner VARCHAR,
+    walletConfig VARCHAR,
+    walletCredentials VARCHAR
 );
 
 INSERT INTO users(login, phone, name, password, gender, dateOfBirth, address, maritalStatus, multipleBirth, contactRelationship, contactName, contactPhone, contactAddress, contactGender, languages, preferredLanguage, generalPractitioner) VALUES('user01@gmail.com', '61999999999', 'Usuário 01', '$2b$12$POQ.KYV3KX/XegxUY.x3huU4ehJSngIjugegJHpaM.sXG4QAfT8yi', 'M', '2020-05-05', 'RUA xpto APTo 25', 'DIVORCED', 'N', 'friends', 'Usuário 2', '618888888888', 'RUA 46 APTo 60', 'M', 'português, inglês, espanhol', 'português', 'Doutor X');
+
+DROP TABLE IF EXISTS organizations;
+CREATE TABLE organizations (
+    id SERIAL PRIMARY KEY,
+    login VARCHAR NOT NULL,
+    name VARCHAR NOT NULL,
+    phone VARCHAR NOT NULL,
+    password VARCHAR NOT NULL
+);
+
+INSERT INTO organizations(login, name, phone, password) VALUES('12.345.678/0000-09', 'Clínica X', '33330010', '$2b$12$POQ.KYV3KX/XegxUY.x3huU4ehJSngIjugegJHpaM.sXG4QAfT8yi');

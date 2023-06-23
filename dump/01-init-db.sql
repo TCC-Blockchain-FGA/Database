@@ -39,4 +39,18 @@ CREATE TABLE organizations (
     password VARCHAR NOT NULL
 );
 
-INSERT INTO organizations(login, name, phone, password) VALUES('12.345.678/0000-09', 'Clínica X', '33330010', '$2b$12$POQ.KYV3KX/XegxUY.x3huU4ehJSngIjugegJHpaM.sXG4QAfT8yi');
+INSERT INTO organizations(login, name, phone, password) VALUES('00.000.000/0000-00', 'Clínica X', '33330010', '$2b$12$POQ.KYV3KX/XegxUY.x3huU4ehJSngIjugegJHpaM.sXG4QAfT8yi');
+
+DROP TABLE IF EXISTS credentials;
+CREATE TABLE credentials (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR NOT NULL,
+    type VARCHAR NOT NULL,
+    season VARCHAR NOT NULL,
+    condition VARCHAR NOT NULL,
+    prescription VARCHAR NOT NULL,
+    email VARCHAR NOT NULL,
+    createDate VARCHAR NOT NULL,
+    doctor VARCHAR NOT NULL,
+    squad VARCHAR NOT NULL
+);

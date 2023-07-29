@@ -3,3 +3,6 @@ start:
 
 build:
 	sudo docker volume create dboffchain
+
+clear:
+	sudo docker-compose down

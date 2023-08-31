@@ -36,10 +36,11 @@ CREATE TABLE organizations (
     login VARCHAR NOT NULL,
     name VARCHAR NOT NULL,
     phone VARCHAR NOT NULL,
-    password VARCHAR NOT NULL
+    password VARCHAR NOT NULL,
+    verkey VARCHAR
 );
 
-INSERT INTO organizations(login, name, phone, password) VALUES('00.000.000/0000-00', 'Clínica X', '33330010', '$2b$12$POQ.KYV3KX/XegxUY.x3huU4ehJSngIjugegJHpaM.sXG4QAfT8yi');
+INSERT INTO organizations(login, name, phone, password, verkey) VALUES('00.000.000/0000-00', 'Clínica X', '33330010', '$2b$12$POQ.KYV3KX/XegxUY.x3huU4ehJSngIjugegJHpaM.sXG4QAfT8yi', 'none');
 
 DROP TABLE IF EXISTS credentials;
 CREATE TABLE credentials (
